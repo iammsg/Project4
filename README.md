@@ -6,6 +6,8 @@
 Overview
 ---
 
+This project uses deep neural networks and convolutional neural networks to clone driving behavior. It trains, validates and tests a model using Keras. The model will output a steering angle to an autonomous vehicle.
+
 1. [model.py](https://github.com/iammsg/Project4/blob/master/model.py) - The script used to create and train the model.
 2. [drive.py](https://github.com/iammsg/Project4/blob/master/drive.py) - The script to drive the car.
 3. [model.h5](https://github.com/iammsg/Project4/blob/master/model.h5) - The saved model.
