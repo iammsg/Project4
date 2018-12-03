@@ -91,9 +91,7 @@ The model used an adam optimizer, so the learning rate was not tuned manually (m
 
 #### 4. Appropriate training data
 
-In order to ensure that the car drives down the center of the road, it's essential to capture center lane driving. I recorded one lap on track one using center lane driving. The FirstSample folder contains images and driving_log.csv file that records the images for this part of the simulation
-
-Then I repeated this process on the same track but in the clockwise direction in order to get more data points.The SecondSample folder contains these images. Each snapshot has 3 images which comes from the left camera, centre camera and right camera. 
+In order to ensure that the car drives down the center of the road, it's essential to capture center lane driving. I recorded one lap on track one using center lane driving. Then I repeated this process on the same track but in the clockwise direction in order to get more data points. Each snapshot has 3 images which comes from the left camera, centre camera and right camera. 
 
 ![alt text][image1]
 
@@ -103,6 +101,6 @@ To augment the data set, I also flipped images and angles thinking that this wou
 
 After the collection process, I had a total of 32016 images. When reading the `driving_log.csv` file each row has ‘center, left, right, steering, throttle, brake, speed’ columns. In this project, I use the camera images (center, left, right) as input and steering as target. The rest are ignored. I then preprocessed this data by normalizing them around zero. I also cropped the top parts of the image to allow for easier fitting
 
-I finally randomly shuffled the data set and put $20\%$ of the data into a validation set. 
+I finally randomly shuffled the data set and put 20\% of the data into a validation set. 
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 10 as evidenced by the loss differential between the training and the validation set. I used an adam optimizer so that manually training the learning rate wasn't necessary.
